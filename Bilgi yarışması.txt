@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Turkcell_bilgi_yarismasi
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Bilgi yarışması");
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine();
+
+            int soru = 1;
+            string cevap;
+            if (soru == 1)
+            {
+                Console.WriteLine("Türkiyenin başkenti neresidir?");
+                Console.WriteLine();
+                Console.WriteLine("A) Ankara");
+                Console.WriteLine("B) istanbul");
+                Console.WriteLine("C) İzmir");
+                Console.WriteLine("D) Bursa");
+                Console.WriteLine();
+                Console.Write("Cevabınız: ");
+                cevap = Console.ReadLine();
+
+                if (cevap == "a" || cevap == "A")
+                {
+                    Console.WriteLine("Cevabınız doğru");
+                    soru= soru + 1;
+                }
+                else
+                {
+                    Console.Write("Cevabınız Yanlış 0/3 soruya doğru cevabı verdiniz");                              
+                 }
+            
+              
+            }
+            if (soru == 2)
+            {
+                Console.WriteLine("istanbulda nerde oturuyorsunuz");
+                Console.WriteLine();
+                Console.WriteLine("A)göstepe");
+                Console.WriteLine("B)kadıköy");
+                Console.WriteLine("C)pendik");                
+                Console.WriteLine("D)IDK");
+                Console.WriteLine();
+                Console.Write("Cevabınız: ");
+                cevap= Console.ReadLine();
+
+                if (cevap == "b" || cevap == "B")
+                {
+                    Console.WriteLine("Cevabınız Doğru");
+                    soru = soru + 1;
+                }
+                else
+                {
+                    Console.Write("Cevabınız yanlış 1/3 soruya doğru cevap verdiniz");
+                }
+            }
+            if (soru == 3)
+            {
+                Console.WriteLine("Atatürk ne zaman doğdu");
+                Console.WriteLine();
+                Console.WriteLine("A) 1881");
+                Console.WriteLine("B) 1882");
+                Console.WriteLine("C) 1883");
+                Console.WriteLine("D) 1884");
+                Console.WriteLine();
+                Console.Write("Cevabnınız: ");
+                cevap = Console.ReadLine();
+                if (cevap == "a" || cevap == "A") 
+                {
+                    Console.Write("Cevabınız doğru yarışmayı kazandınız!");
+                }
+                else
+                {
+                    Console.Write("Yanlılş cevap verdiniz soruların 2/3 doğru bildiniz");
+                }
+            }
+            Console.Read();
+
+        }
+    }
+}
